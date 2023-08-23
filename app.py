@@ -77,7 +77,7 @@ def swamioutput(string_dialogue, prompt_input):
 
     # Start chatting with the chatbot
     chat_history = []
-    result = qa_chain({'question': f"{string_dialogue} {prompt_input}", 'chat_history': chat_history})
+    result = qa_chain({'question': f"{string_dialogue} {prompt_input} Assistant: ", 'chat_history': chat_history})
     chat_history.append((prompt_input, result['answer']))
 
     return result['answer']
