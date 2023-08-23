@@ -39,7 +39,10 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
+chat_history = []
+
 def clear_chat_history():
+    chat_history = []
     st.session_state.messages = [{"role": "assistant", "content": "Are there any other things that you want me to help you with? 😊"}]
 st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 
@@ -76,7 +79,6 @@ def swamioutput(string_dialogue, prompt_input):
     )
 
     # Start chatting with the chatbot
-    chat_history = []
     result = qa_chain({'question': f"{prompt_input}", 'chat_history': chat_history})
     chat_history.append((prompt_input, result['answer']))
 
