@@ -10,6 +10,8 @@ from langchain.document_loaders import PyPDFLoader
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.chains import ConversationalRetrievalChain
 
+pinecone.init(api_key = st.secrets["api_key"], environment = st.secrets["environment"])
+
 # App title
 st.set_page_config(page_title="Sathya Sai Echos")
 
