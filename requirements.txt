@@ -1,0 +1,6 @@
+streamlit
+pinecone-client
+langchain
+pypdf
+sentence_transformers
+replicate
