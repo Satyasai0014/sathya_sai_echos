@@ -16,19 +16,19 @@ pinecone.init(api_key = st.secrets["api_key"], environment = st.secrets["environ
 # App title
 st.set_page_config(page_title="Sathya Sai Echos")
 
-urllib.request.urlretrieve(
-  'https://drive.google.com/file/d/1-K77NZZ2vwUzB1LWZshz53uQFx1ljDE-/view?usp=sharing',
-   "sse.png")
-original_image = Image.open("sse.png")
+# urllib.request.urlretrieve(
+#   'https://drive.google.com/file/d/1-K77NZZ2vwUzB1LWZshz53uQFx1ljDE-/view?usp=sharing',
+#    "sse.png")
+# original_image = Image.open("sse.png")
 
-# Resize the image to a smaller dimension
-width, height = 370, 300  
+# # Resize the image to a smaller dimension
+# width, height = 370, 300  
 
-# Adjust the dimensions as needed
-resized_image = original_image.resize((width, height))
+# # Adjust the dimensions as needed
+# resized_image = original_image.resize((width, height))
 
-# Save the resized image
-resized_image.save("resized_image.png")
+# # Save the resized image
+# resized_image.save("resized_image.png")
 
 # Replicate Credentials
 with st.sidebar:
