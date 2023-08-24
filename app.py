@@ -16,7 +16,10 @@ pinecone.init(api_key = st.secrets["api_key"], environment = st.secrets["environ
 # App title
 st.set_page_config(page_title="Sathya Sai Echos")
 
-original_image = Image.open(r"C:\Users\Msc 2\Downloads\Screenshot_2023-08-17_145029-removebg-preview (1).png")
+urllib.request.urlretrieve(
+  'https://drive.google.com/file/d/1-K77NZZ2vwUzB1LWZshz53uQFx1ljDE-/view?usp=drive_link',
+   "sse.png")
+original_image = Image.open(r"sse")
 # Resize the image to a smaller dimension
 width, height = 370, 300  # Adjust the dimensions as needed
 resized_image = original_image.resize((width, height))
