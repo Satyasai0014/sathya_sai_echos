@@ -83,8 +83,8 @@ def swamioutput(string_dialogue, prompt_input):
     vectordb = Pinecone.from_existing_index(index_name, embeddings)
 
     # Initialize Replicate Llama2 Model
-    llm = Replicate(model="replicate/llama-2-70b-chat:58d078176e02c219e11eb4da5a02a7830a283b14cf8f94537af893ccff5ee781",
-                        input={"temperature": 0.75, "max_length": 1000})
+    llm = Replicate(model="lucataco/llama-2-13b-chat:18f253bfce9f33fe67ba4f659232c509fbdfb5025e5dbe6027f72eeb91c8624b",
+                        input={"temperature": 0.75, "max_length": 800})
 
     # Set up the Conversational Retrieval Chain
     qa_chain = ConversationalRetrievalChain.from_llm(
