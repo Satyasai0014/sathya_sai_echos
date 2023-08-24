@@ -9,11 +9,20 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.document_loaders import PyPDFLoader
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.chains import ConversationalRetrievalChain
+from PIL import Image
 
 pinecone.init(api_key = st.secrets["api_key"], environment = st.secrets["environment"])
 
 # App title
 st.set_page_config(page_title="Sathya Sai Echos")
+
+original_image = Image.open(r"C:\Users\Msc 2\Downloads\Screenshot_2023-08-17_145029-removebg-preview (1).png")
+# Resize the image to a smaller dimension
+width, height = 370, 300  # Adjust the dimensions as needed
+resized_image = original_image.resize((width, height))
+
+# Save the resized image
+resized_image.save("resized_image.png")
 
 # Replicate Credentials
 with st.sidebar:
