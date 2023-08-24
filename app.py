@@ -19,9 +19,12 @@ st.set_page_config(page_title="Sathya Sai Echos")
 urllib.request.urlretrieve(
   'https://drive.google.com/file/d/1-K77NZZ2vwUzB1LWZshz53uQFx1ljDE-/view?usp=drive_link',
    "sse.png")
-original_image = Image.open(r"sse.png")
+original_image = Image.open("sse.png")
+
 # Resize the image to a smaller dimension
-width, height = 370, 300  # Adjust the dimensions as needed
+width, height = 370, 300  
+
+# Adjust the dimensions as needed
 resized_image = original_image.resize((width, height))
 
 # Save the resized image
